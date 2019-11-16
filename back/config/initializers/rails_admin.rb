@@ -34,6 +34,16 @@ RailsAdmin.config do |config|
     delete
     show_in_app
 
+    
+    config.authenticate_with do
+      authenticate_or_request_with_http_basic('Login required') do |email, password|
+        if email == 'admin@123.321' && password == Rails.configuration.passsssss
+          true
+        end
+      end
+    end
+
+
     ## With an audit adapter, you can add:
     # history_index
     # history_show
