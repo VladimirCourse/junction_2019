@@ -43,3 +43,5 @@ gem 'bson_ext', '~> 1.5.1'
 gem 'sidekiq'
 
 gem 'rails_admin'
+
+gem 'kaminari-mongoid'

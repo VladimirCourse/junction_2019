@@ -37,5 +37,32 @@ RailsAdmin.config do |config|
     ## With an audit adapter, you can add:
     # history_index
     # history_show
+
+    config.model 'Image' do
+      field :current_image do
+        read_only true
+        formatted_value do
+          if bindings[:object]
+            bindings[:view].tag(:img, { src: "/images/#{bindings[:object].id}", width: 300, height: 200, style: "object-fit: cover;" })
+          end
+        end
+      end
+
+      field :image_file, :file_upload do
+        thumb_method do
+          return resource_url
+        end
+        delete_method do
+        end 
+        cache_method do
+        end 
+        def image?
+          true
+        end
+        def resource_url 
+          return nil
+        end
+      end
+    end
   end
 end

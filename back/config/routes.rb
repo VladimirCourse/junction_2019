@@ -1,4 +1,12 @@
 Rails.application.routes.draw do
-  mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  mount RailsAdmin::Engine => '/adminsdflsdfljhdl', as: 'rails_admin'
+
+  get 'places', action: :index, controller: 'places'
+  
+  get 'images/:id', action: :show, controller: 'images'
+
+  get 'orders', action: :index, controller: 'orders'
+  post 'orders', action: :create, controller: 'orders'
+
+  get 'recommendations', action: :index, controller: 'recommendations'
 end
