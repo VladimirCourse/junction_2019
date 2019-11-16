@@ -39,7 +39,7 @@ class PlaceListPageState extends State<PlaceListPage> with SingleTickerProviderS
         backgroundColor: Colors.white,
         elevation: 0,
         centerTitle: false,
-        title: Text('Places',
+        title: Text('Restaurants',
           style: TextStyle(
             color: Colors.black
           ),

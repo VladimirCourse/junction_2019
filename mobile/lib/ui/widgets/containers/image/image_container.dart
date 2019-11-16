@@ -36,7 +36,7 @@ class ImageContainer extends StatelessWidget {
           height: MediaQuery.of(context).size.height,
           fadeOutDuration: Duration(milliseconds: 100),
           fadeInDuration: Duration(milliseconds: 100),
-          imageUrl: 'http://10.84.110.246:3000/images/${id}',
+          imageUrl: 'http://34.90.110.227:3002/images/${id}', //'http://10.84.110.246:3000/images/${id}',
           fit: fit,
           placeholder: (context, url) {
             return buildEmptyImage(context);

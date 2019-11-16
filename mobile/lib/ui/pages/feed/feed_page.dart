@@ -308,35 +308,12 @@ class FeedPageState extends State<FeedPage> with SingleTickerProviderStateMixin 
     return Scaffold(
       resizeToAvoidBottomPadding: false,
       appBar: buildAppBar(),
-      body: Container(
-        color: Colors.white,
+      backgroundColor: Colors.white,
+      body: SingleChildScrollView(
         child: buildBody(),
       )
     );
   }
 }
-      // body: RefreshIndicator(
-      //   color: AppColors.main,
-        //onRefresh: onRefresh,
-        // child: StreamBuilder(
-        //   stream: bloc.places.stream,
-        //   builder: (BuildContext context, AsyncSnapshot<List<Place>> restaurantsSnapshot) {
-        //     if (restaurantsSnapshot.hasData) {
-        //       return StreamBuilder(
-        //         stream: bloc.mode.stream,
-        //         builder: (BuildContext context, AsyncSnapshot<Mode> modeSnapshot) {
-        //           if (modeSnapshot.data == Mode.map) {
-        //             return buildMap(restaurantsSnapshot.data);
-        //           } else {
-        //             return buildList(restaurantsSnapshot.data);
-        //           }
-        //         }
-        //       );
-        //     } else {
-        //       return buildLoader();
-        //     }
-        //   }
-        //)
-      //)
-    
+
   

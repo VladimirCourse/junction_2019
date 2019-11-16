@@ -12,8 +12,8 @@ import '../models/order_dish.dart';
 
 class ApiProvider { 
 
-  static const String url = 'http://10.84.110.246:3000';
-  //static const String url = 'http://35.189.206.115:3001';
+  //static const String url = 'http://10.84.110.246:3000';
+  static const String url = 'http://34.90.110.227:3002';
   
 
   static const String recommendations = '/recommendations';
