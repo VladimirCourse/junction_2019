@@ -30,6 +30,15 @@ class RecommendationsController < ApplicationController
                         dishes: Place.all.third.dishes
                     }
                 ],
+            },
+            {
+                name: 'Late Dinner',
+                places: [
+                    {
+                        place: Place.all.last,
+                        dishes: Place.all.last.dishes
+                    }
+                ],
             }
         ]
     end
