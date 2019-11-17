@@ -246,7 +246,7 @@ class FeedPageState extends State<FeedPage> with SingleTickerProviderStateMixin 
                               child: Row(
                                 crossAxisAlignment: CrossAxisAlignment.center,
                                 children: [
-                                  Text('${price}€',
+                                  Text('${price.toStringAsFixed(2)}€',
                                     style: TextStyle(
                                       fontSize: price != salePrice ? 13 : 16,
                                       color: Colors.black,
@@ -255,7 +255,7 @@ class FeedPageState extends State<FeedPage> with SingleTickerProviderStateMixin 
                                     ),
                                   ),
                                   price != salePrice ? 
-                                  Text(' ${salePrice}€',
+                                  Text(' ${salePrice.toStringAsFixed(2)}€',
                                     style: TextStyle(
                                       fontSize: 16,
                                       fontWeight: FontWeight.w600,

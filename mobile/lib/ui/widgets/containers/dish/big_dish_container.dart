@@ -187,7 +187,7 @@ class BigDishContainer extends StatelessWidget {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
-                      Text('${dish.price}€',
+                      Text('${dish.price.toStringAsFixed(2)}€',
                         style: TextStyle(
                           fontSize: dish.price != dish.salePrice ? 13 : 16,
                           color: Colors.black,
@@ -195,7 +195,7 @@ class BigDishContainer extends StatelessWidget {
                         ),
                       ),
                       dish.price != dish.salePrice ? 
-                      Text(' ${dish.salePrice}€',
+                      Text(' ${dish.salePrice.toStringAsFixed(2)}€',
                         style: TextStyle(
                           fontSize: 16,
                           color: Colors.red

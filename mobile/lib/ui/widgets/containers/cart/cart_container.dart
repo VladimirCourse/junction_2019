@@ -67,7 +67,7 @@ class CartContainer extends StatelessWidget {
                     child: Row(
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
-                        Text('${dish.price * count}€',
+                        Text('${(dish.price * count).toStringAsFixed(2)}€',
                           style: TextStyle(
                             fontSize: dish.price != dish.salePrice ? 13 : 16,
                             color: Colors.black,
@@ -75,7 +75,7 @@ class CartContainer extends StatelessWidget {
                           ),
                         ),
                         dish.price != dish.salePrice ? 
-                        Text(' ${dish.salePrice * count}€',
+                        Text(' ${(dish.salePrice * count).toStringAsFixed(2)}€',
                           style: TextStyle(
                             fontSize: 16,
                             color: Colors.red
@@ -216,7 +216,7 @@ class CartContainer extends StatelessWidget {
               Row(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  Text('${price}€',
+                  Text('${price.toStringAsFixed(2)}€',
                     style: TextStyle(
                       fontSize: price != salePrice ? 13 : 16,
                       color: Colors.black,
@@ -225,7 +225,7 @@ class CartContainer extends StatelessWidget {
                     ),
                   ),
                   price != salePrice ? 
-                  Text(' ${salePrice}€',
+                  Text(' ${salePrice.toStringAsFixed(2)}€',
                     style: TextStyle(
                       fontSize: 16,
                       fontWeight: FontWeight.w600,
