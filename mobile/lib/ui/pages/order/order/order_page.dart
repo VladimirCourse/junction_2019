@@ -144,7 +144,7 @@ class OrderPageState extends State<OrderPage> with SingleTickerProviderStateMixi
   }
 
   Widget buildText() {
-    return Text('Заказ ${widget.order.id.substring(0, 8)}',
+    return Text('Order ${widget.order.id.substring(0, 8)}',
       style: TextStyle(
         fontSize: 18,
         fontWeight: FontWeight.w600,
